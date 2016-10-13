@@ -1,0 +1,25 @@
+<h1 align="center">Search Your Content</h1>
+<p align="right"><%= link_to 'Create Record', controller: "contents", action: "new"%></p>
+<%= form_for 'contents/search' ,:class=>'field',method: :get do |f| %>
+  <p align='center'>
+    <%= f.label "Search for" %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Go", name: nil %>
+  
+<% end %>
+ </p>
+ <p><%= @text%></p>
+ <%if @text.nil? %>
+ <p>No Results</p>
+ <%end%>
+<ul align='center'>
+  <% @results.each do |result| %>
+   <table>
+   <th>
+   <tr>
+       <%= link_to result.data, controller: "contents", action: "show", id: result._id%>
+    </tr>
+    </th>
+  </table>
+  <% end %>
+</ul>

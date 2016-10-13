@@ -1,0 +1,9 @@
+<%=form_for @msg , :url=>{:action=>"update" ,:id=> @msg} do |f| %>
+<div align="center">
+    <p><%= f.label :Owner%><br>
+	<%= f.text_field :owner %><br></p>
+	<p><%= f.label :Data%><br>
+    <%= f.text_field :data%><br>
+    <%= f.submit 'update'  %></p>
+</div>
+<%end%>

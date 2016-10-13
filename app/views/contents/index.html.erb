@@ -1,0 +1,5 @@
+
+<% @msgs.each do |m|%>
+<p align="center"><%= m.data%> By <%= m.owner%> <%= link_to 'Delete' , delete_path_path(m) %>  </p>
+<%end%>
+<p align='center'><%= link_to 'New Message' ,'contents/new' %></p>

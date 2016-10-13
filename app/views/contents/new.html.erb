@@ -1,0 +1,10 @@
+<%=form_for(@msg) do |f| %>
+<div align="center">
+    <p><%= f.label :Owner%><br>
+	<%= f.text_field :owner %><br></p>
+	<p><%= f.label :Data%><br>
+    <%= f.text_field :data%><br>
+    <%= f.submit 'GoCreate' %></p>
+
+</div>
+<%end%>
